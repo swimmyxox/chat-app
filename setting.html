@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="]ie=edge">  
+    <title>creative css</title>
+  
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style6.css">
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="style.js"></script>
+  </head>
+
+<body>
+<!-- side bar start-->
+  <div id="sidebar">
+    <div class="sidebar__btn-profile">
+      <button name="profile" onclick="location.href='profile.html'"></button>
+    </div>
+    <div class="sidebar__btn-talk">
+      <button name="talk-list" onclick="location.href='talk.html'"></button>
+    </div>
+    <div class="sidebar__btn-setting">
+      <button name="setting" onclick="location.href='setting.html'"></button>
+    </div>
+  </div>
+<!-- container start -->
+  <div id="container">
+<!-- container-left start -->
+    <div id="container__left">
+<!-- container-left head area start -->
+    <header id="container__left-head">
+      <div class="menu-btn">
+        <label id="nav_open" for="nav_checkbox"><span></span></label>
+        <input type="checkbox" id="nav_checkbox">
+        <nav class="inner_nav">
+          <header class="inner_nav-head">
+            <div class="inner_nav-close-btn">
+              <label class="nav_close" for="nav_checkbox"><span></span></label>
+            </div>
+            <div class="inner_nav-setting-btn">
+              <button onclick="location.href='setting.html'"><i></i></button>
+            </div>
+          </header>
+          <ul>
+            <li><a href="talk.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="compose.html">Compose</a></li>
+          </ul>
+          <div class="inner_nav-foot">
+            <div class="inner_nav-logout-btn"><button><h1>Logout</h1><p>ANDREA JAMESON</p></button></div>
+            <div class="inner_nav-icon"><img src="./img/sicon.png" alt="icon"></div>
+          </div>
+        </nav>
+      </div>
+      <div class="title">Settings</div>
+      <div class="setting-btn"><button onclick="location.href='setting.html'"></button></div>
+    </header>
+<!-- container-left setting area start -->
+    <div class="container__left-bg"></div>
+    <div class="container__settings">
+      <div class="container__settings-profile">
+        <div class="container__settings-profile-photo">
+          <div class="photo"><img src="./img/sicon.png" alt="photo"></div>
+          <div class="update"><a class="update-btn" href="">UPDATE PHOTO</a></div>
+        </div>
+        <div class="container__settings-profile-information">
+        <div class="information-name">
+          <p>NAME</p>
+          <input class="setting" type="text" name="textarea" value="Andrea Jameson">
+        </div>
+        <div class="information-email">
+          <p>EMAIL</p>
+          <input class="setting" type="text" name="textarea" value="andrea@app.com">
+        </div>
+        <div class="information-password">
+          <p>PASSWORD</p>
+          <input class="setting" type="password" name="textarea" value="abcd1234">
+        </div>
+      </div>
+      </div>
+      <div class="container__settings-notifications">
+        <div class="push">
+          <p>Push notifications</p>
+          <input type="checkbox" class="notifications" name="Push">
+        </div>
+        <div class="email">
+          <p>Email notifications</p>
+          <input type="checkbox" class="notifications" name="Email">
+        </div>
+        <div class="sound">
+          <p>Notification sound</p>
+          <input type="checkbox" class="notifications" name="Sound">
+        </div>
+      </div>
+    </div>
+    </div>
+<!-- container-right start -->
+  <div id="container__right">
+<!-- container-right head area start -->
+    <header id="container__right-head">
+      <div class="back-btn"><button></button></div>
+      <div class="title">Michael, Amy</div>
+    </header>
+<!-- container-right talk area start -->
+    <div class="container__talk">
+      <div class="container__talk-top">
+        <div class="clock-icon"></div>
+        <div class="date">TODAY AT 10:45AM</div>
+      </div>
+      <div class="talk__item-left">
+        <div class="item_icon"><img src="./img/icon2.png" alt="icon"></div>
+        <div class="item_talk">
+          <div class="item_talk-text">Hi Andrea! How are you?</div>
+          <p class="item_talk-time-left">5 minutes ago</p>
+        </div>
+      </div>
+      <div class="talk__item-right">
+        <div class="item_icon"><img src="./img/micon.png" alt="icon"></div>
+        <div class="item_talk">
+          <div class="item_talk-text">Doing good, how do you feel about grabbing a coffee sometime?</div>
+          <p class="item_talk-time-right">5 minutes ago</p>
+        </div>
+      </div>
+      <div class="talk__item-left">
+        <div class="item_icon"><img src="./img/icon3.png" alt="icon"></div>
+        <div class="item_talk-none">
+          <div class="item_talk-none-load"></div>
+        </div>
+      </div>
+    </div>
+<!-- container-right foot area start -->
+    <div class="container__right-foot">
+      <div class="wrapper-foot">
+      <div class="camera-btn"><button><i></i></button></div>
+      <div class="message"><input type="text" rows="20" class="msg"></input></div>
+      <div class="send-btn"><button></button></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

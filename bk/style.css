@@ -1,0 +1,239 @@
+
+body{
+  width:100%;
+  height:100%;
+  font-family: 'Karla', sans-serif;
+  color:#ffffff;
+  background: linear-gradient(#7571ea, #ed8cb9);
+}
+
+header{
+  width:750px;
+  height:128px;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.header-main{
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  -webkit-flex-pack:distribute;
+  -moz-flex-pack:distribute;
+  -ms-flex-pack:distribute;
+  -webkit-justify-content:space-between;
+  -moz-justify-content:space-between;
+  justify-content:space-between;
+  padding-top:70px;
+}
+
+.menu-icon {
+  color: #fff;
+  position: absolute;
+  top: 76px;
+  width: 28px;
+  height: 7px;
+  background-color: currentColor;
+  margin-left:30px;
+}
+
+.menu-icon:before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  width: 38px;
+  height: 7px;
+  background-color: currentColor;
+}
+
+.title{
+  font-size:30px;
+  margin:0 auto;
+}
+
+.container{
+  width:750px;
+  height:1090px;
+  margin-top:115px;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.new-chat{
+  width:0;
+  height:0;
+}
+.new-chat button{
+  background-color: #fff;
+  position: relative;
+  top: -60px;
+  left: 580px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border:none;
+}
+
+.new-chat button::before{
+  color: #000;
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  top:57px;
+  left:45px;
+  border:none;
+  background-color: currentColor;
+}
+
+.new-chat button::after{
+  color: #000;
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  top:57px;
+  left:45px;
+  border:none;
+  background-color: currentColor;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.con__top{
+  width:650px;
+  height:50px;
+  padding:70px 50px 0 50px;
+}
+
+.con__top-icon{
+width:24px;
+height:16px;
+}
+
+.con__top .con__top-ttl{
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-left:1em;
+}
+
+.con__list{
+  width:650px;
+  max-height:900px;
+  margin:0 50px;
+  background-color: #ffffff;
+  color:#000000;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list__item{
+  height:80px;
+  padding:50px 50px;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  -webkit-flex-pack:distribute;
+  -moz-flex-pack:distribute;
+  -ms-flex-pack:distribute;
+  -webkit-justify-content:flex-start;
+  -moz-justify-content:flex-start;
+  justify-content:flex-start;
+  border-bottom:1px solid #e5e5e5 ;
+}
+
+.list__item:hover{
+  background-color: #f2f2f2;
+}
+
+.list__icon{
+  display:inline;
+  position:relative;
+}
+
+.alert{
+  width:12px;
+  height:20px;
+  padding:10px 14px;
+  border-radius: 100%;
+  background-color: #4a64ff;
+  color:#fff;
+  left:-20px;
+  top:-20px;
+  position: absolute;
+  border: none;
+  font-size:18px;
+  font-weight: 900;
+}
+
+.list__inf{
+  height:63px;
+  width:420px;
+  padding-top:7px;
+  padding-left:50px;
+  display:inline-block;
+}
+
+.list__inf-head{
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  -webkit-flex-pack:distribute;
+  -moz-flex-pack:distribute;
+  -ms-flex-pack:distribute;
+  -webkit-justify-content:space-between;
+  -moz-justify-content:space-between;
+  justify-content:space-between;
+}
+
+p.name{
+  font-size: 24px;
+  font-weight: 900;
+  display: inline;
+}
+
+p.time{
+  font-size: 22px;
+  font-weight: 900;
+  color:#a93932;
+  right:0;
+  display: inline;
+}
+
+.list__inf-cont{
+  font-size: 24px;
+  display: inline-block;
+  padding-top:15px;
+  padding-left:2px;
+}
+
+/* reset css */
+
+dl, dt, dd, ol, ul, li{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    list-style: none;
+}
+
+p{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
