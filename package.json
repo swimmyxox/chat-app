@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "stylelint": "npx stylelint '**/*.css'",
+    "stylelint:fix": "npx stylelint '**/*.css' --fix",
+    "fmt": "prettier --write '**/*.{html,js}'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "2.0.5",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0"
   }
