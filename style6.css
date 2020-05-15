@@ -1,4 +1,3 @@
-
 html {
   height: 100%;
   width: 100%;
@@ -16,7 +15,35 @@ body {
   padding: 0;
 }
 
-/* side-menu area start */
+div {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+/* ---------- side-menu ---------- */
 
 #sidebar {
   position: relative;
@@ -147,32 +174,7 @@ body {
   background-color: #462a37;
 }
 
-/* side-menu area end */
-
-/* onner nav要素あとで要編集。 */
-.menu-btn {
-  display: none;
-}
-
-.setting-btn {
-  display: none;
-}
-
-.setting-btn button {
-  display: none;
-}
-
-.title {
-  width: 100%;
-  font-size: 18px;
-  text-align: center;
-  line-height: 50px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-/* container area */
+/* ---------- container ---------- */
 
 #container {
   width: calc(100% - 75px);
@@ -211,11 +213,35 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* ---------- container-left head ---------- */
+
+.menu-btn {
+  display: none;
+}
+
+.setting-btn {
+  display: none;
+}
+
+.setting-btn button {
+  display: none;
+}
+
+.title {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
 .inner_nav {
   visibility: collapse;
 }
 
-/* left-container area */
+/* ---------- container-left ---------- */
 
 .container__left-bg {
   position: absolute;
@@ -310,8 +336,8 @@ body {
   width: 100%;
 }
 
-input.setting[type="text"],
-input.setting[type="password"] {
+input.setting[type='text'],
+input.setting[type='password'] {
   width: 100%;
   height: 30px;
   outline: none;
@@ -322,7 +348,7 @@ input.setting[type="password"] {
   -moz-appearance: none;
 }
 
-input.setting[type="password"] {
+input.setting[type='password'] {
   font-size: 22px;
 }
 
@@ -359,7 +385,6 @@ input.setting[type="password"] {
   line-height: 100%;
 }
 
-/* notification button */
 .notifications {
   position: relative;
   top: 0;
@@ -396,7 +421,7 @@ input.setting[type="password"] {
   left: 33px;
 }
 
-/* right contents */
+/* ---------- container-right ---------- */
 .back-btn {
   display: none;
 }
@@ -532,7 +557,7 @@ p.item_talk-time-right {
   display: inline-block;
 }
 
-/* --Loading Animation-- */
+/* ----- Loading Animation ----- */
 
 .item_talk-none-load {
   position: relative;
@@ -593,8 +618,6 @@ p.item_talk-time-right {
     background-color: lighten(currentColor, 45%);
   }
 }
-
-/* --Loading Animation-- */
 
 .container__right-foot {
   position: absolute;
@@ -677,13 +700,13 @@ p.item_talk-time-right {
   width: calc(100% - 95px);
   height: 100%;
   line-height: 60px;
-  margin: 0 45px 0 50px;
+  margin: 0 50px;
   border: none;
   position: absolute;
   display: inline-block;
 }
 
-.msg {
+input.msg {
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -725,8 +748,8 @@ p.item_talk-time-right {
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
   border-left: 32px solid #fff;
   border-right: none;
 }
@@ -736,22 +759,15 @@ p.item_talk-time-right {
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
   border-left: 10px solid #412b38;
   border-right: none;
   padding: 0;
   margin: 0;
 }
 
-img {
-  width: 60px;
-  height: 60px;
-}
-
 @media screen and (max-width: 1023px) {
-  /* container area */
-
   #container {
     width: 100%;
     height: 100%;
@@ -773,12 +789,10 @@ img {
 }
 
 @media screen and (max-width: 639px) {
-  /* sidebar area */
   #sidebar {
     display: none;
   }
 
-  /* container area */
   #container {
     width: 100%;
     height: 100%;
@@ -794,7 +808,6 @@ img {
     border: none;
   }
 
-  /* mobile-header area start */
   #container__left-head {
     position: relative;
     display: flex;
@@ -821,6 +834,56 @@ img {
     height: 17px;
     display: block;
     z-index: 1;
+  }
+
+  .setting-btn {
+    position: relative;
+    top: 11px;
+    right: 0;
+    height: 28px;
+    width: 28px;
+    display: block;
+  }
+
+  .setting-btn button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    display: block;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .setting-btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 4px;
+    height: 16px;
+    background-color: #242343;
+  }
+
+  .inner_nav {
+    position: fixed;
+    opacity: 0;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(#ed8cb9, #7571ea);
+    transition: all 0.5s ease-in-out;
   }
 
   #nav_checkbox {
@@ -863,60 +926,6 @@ img {
     opacity: 1;
   }
 
-  .setting-btn {
-    position: relative;
-    top: 11px;
-    right: 0;
-    height: 28px;
-    width: 28px;
-    display: block;
-  }
-
-  .setting-btn button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 28px;
-    height: 28px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 50%;
-    background-color: #fff;
-    display: block;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .setting-btn button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 12px;
-    width: 4px;
-    height: 16px;
-    background-color: #242343;
-  }
-
-  /* mobile-header area end */
-
-  /* mobile-inner_nav area start */
-  .inner_nav {
-    position: fixed;
-    opacity: 0;
-    z-index: 40;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    min-width: 320px;
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(#ed8cb9, #7571ea);
-    transition: all 0.5s ease-in-out;
-  }
-
-  /* mobile-inner_nav area head start */
   .inner_nav-head {
     position: relative;
     top: 0;
@@ -935,7 +944,7 @@ img {
     height: 0;
   }
 
-  .nav_close span {
+  #nav_close span {
     position: absolute;
     top: 12.5px;
     left: 0;
@@ -949,7 +958,7 @@ img {
     cursor: pointer;
   }
 
-  .nav_close span::before {
+  #nav_close span::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -962,7 +971,7 @@ img {
     transform: rotate(45deg);
   }
 
-  .nav_close span::after {
+  #nav_close span::after {
     content: '';
     position: absolute;
     color: #fff;
@@ -1030,9 +1039,6 @@ img {
     z-index: 1;
   }
 
-  /* mobile-inner_nav area head end */
-
-  /* mobile-inner_nav area menu start */
   .inner_nav ul {
     height: calc(100% - 150px);
     width: 100%;
@@ -1065,9 +1071,6 @@ img {
     padding-bottom: 5px;
   }
 
-  /* mobile-inner_nav area menu end */
-
-  /* mobile-inner_nav area foot start */
   .inner_nav-foot {
     position: relative;
     left: 0;
@@ -1130,43 +1133,4 @@ img {
     width: 100px;
     height: auto;
   }
-
-  /* mobile-inner_nav area foot end */
-
-  /* mobile-inner_nav area end */
-}
-
-/* reset css */
-
-dl,
-dt,
-dd,
-ol,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  list-style: none;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-div {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: 0;
 }
