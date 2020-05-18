@@ -1,100 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="]ie=edge">  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="]ie=edge" />
     <title>creative css</title>
-  
+
     <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-  
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style4.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style4.css" />
 
     <!-- Javascript -->
     <script type="text/javascript" src="style.js"></script>
   </head>
 
-<body>
-  <nav>
-    <div class="nav__profile"><button></button></div>
-    <div class="nav__talk"><button onclick="location.href='talk.html'"></button></div>
-    <div class="nav__custom"><button><i></i></button></div>
-  </nav>
-  <div class="container">
-    <div class="container__left">
-    <header class="head__left">
-      <div class="menu-btn"><button onclick="location.href='talk.html'"></button></div>
-      <div class="custom-btn"><button onclick="location.href='talk.html'"><i></i></button></div>
-      <div class="title">Profile</div>
-    </header>
-    <div class="container__left-bg"></div>
-    <div class="profile">
-      <div class="profile-top">
-        <div class="profile-top__img">
-          <div class="profile-top__name"><p>Andrea<br>Jameson</p></div>
+  <body>
+    <!-- side bar start-->
+    <div id="sidebar">
+      <div class="sidebar__btn-profile">
+        <button name="profile" onclick="location.href='profile.html'"></button>
+      </div>
+      <div class="sidebar__btn-talk">
+        <button name="talk-list" onclick="location.href='talk.html'"></button>
+      </div>
+      <div class="sidebar__btn-setting">
+        <button name="setting" onclick="location.href='setting.html'">
+          <i></i>
+        </button>
+      </div>
+    </div>
+    <!-- container start -->
+    <div id="container">
+      <!-- container-left start -->
+      <div id="container__left">
+        <!-- container-left head area start -->
+        <header id="container__left-head">
+          <div class="menu-btn">
+            <label id="nav_open" for="nav_checkbox"><span></span></label>
+            <input type="checkbox" id="nav_checkbox" />
+            <nav class="inner_nav">
+              <header class="inner_nav-head">
+                <div class="inner_nav-close-btn">
+                  <label id="nav_close" for="nav_checkbox"><span></span></label>
+                </div>
+                <div class="inner_nav-setting-btn">
+                  <button onclick="location.href='setting.html'">
+                    <i></i>
+                  </button>
+                </div>
+              </header>
+              <ul>
+                <li><a href="talk.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="compose.html">Compose</a></li>
+              </ul>
+              <div class="inner_nav-foot">
+                <div class="inner_nav-logout-btn">
+                  <button>
+                    <h1>Logout</h1>
+                    <p>ANDREA JAMESON</p>
+                  </button>
+                </div>
+                <div class="inner_nav-icon">
+                  <img src="./img/sicon.png" alt="icon" />
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="title">Profile</div>
+          <div class="setting-btn">
+            <button onclick="location.href='setting.html'"><i></i></button>
+          </div>
+        </header>
+        <!-- container-left setting area start -->
+        <div class="container__left-bg"></div>
+        <div class="container__profile">
+          <div class="container__profile_top">
+            <div class="container__profile_top_name">
+              <p>Andrea<br />Jameson</p>
+            </div>
+          </div>
+          <div class="container__profile_bottom">
+            <div class="container__profile_bottom_information">
+              <p>Event Manager<br />San Francisco</p>
+            </div>
+            <div class="container__profile_bottom_states">
+              <div class="states">
+                <h1>145k</h1>
+                <p>FOLLOWERS</p>
+              </div>
+              <div class="states">
+                <h1>56k</h1>
+                <p>FOLLOWING</p>
+              </div>
+              <div class="states">
+                <h1>1,690</h1>
+                <p>LIKES</p>
+              </div>
+            </div>
+            <div class="container__profile_bottom_toolbar">
+              <div class="toolbar_item">
+                <button
+                  class="talk-btn"
+                  onclick="location.href='talk.html'"
+                ></button>
+              </div>
+              <div class="toolbar_item">
+                <button class="phone-btn"><i></i></button>
+              </div>
+              <div class="toolbar_item">
+                <button class="video-btn"></button>
+              </div>
+            </div>
+            <div class="add-member-btn">
+              <button><i></i></button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="profile-bottom">
-        <div class="add-member"><button><i></i></button></div>
-        <div class="profile-bottom__inf">
-          <p>Event Manager<br>San Francisco</p>
+      <!-- container-right start -->
+      <div id="container__right">
+        <!-- container-right head area start -->
+        <header id="container__right-head">
+          <div class="back-btn"><button></button></div>
+          <div class="title">Michael, Amy</div>
+        </header>
+        <!-- container-right talk area start -->
+        <div class="container__talk">
+          <div class="container__talk-top">
+            <div class="clock-icon"></div>
+            <div class="date">TODAY AT 10:45AM</div>
+          </div>
+          <div class="talk__item-left">
+            <div class="item_icon">
+              <img src="./img/icon2.png" alt="icon" />
+            </div>
+            <div class="item_talk">
+              <div class="item_talk-text">Hi Andrea! How are you?</div>
+              <p class="item_talk-time-left">5 minutes ago</p>
+            </div>
+          </div>
+          <div class="talk__item-right">
+            <div class="item_icon">
+              <img src="./img/micon.png" alt="icon" />
+            </div>
+            <div class="item_talk">
+              <div class="item_talk-text">
+                Doing good, how do you feel about grabbing a coffee sometime?
+              </div>
+              <p class="item_talk-time-right">5 minutes ago</p>
+            </div>
+          </div>
+          <div class="talk__item-left">
+            <div class="item_icon">
+              <img src="./img/icon3.png" alt="icon" />
+            </div>
+            <div class="item_talk-none">
+              <div class="item_talk-none-load"></div>
+            </div>
+          </div>
         </div>
-        <div class="profile-bottom__states">
-          <div class="states"><h1>145k</h1>FOLLOWERS</div>
-          <div class="states"><h1>56k</h1>FOLLOWING</div>
-          <div class="states"><h1>1,690</h1>LIKES</div>
-        </div>
-        <div class="profile-bottom__tools">
-          <div class="tools"><button class="talk_btn" onclick="location.href='talk.html'"></button></div>
-          <div class="tools"><button class="phone_btn"></button></div>
-          <div class="tools"><button class="video_btn"></button></div>
+        <!-- container-right foot area start -->
+        <div class="container__right-foot">
+          <div class="wrapper-foot">
+            <div class="camera-btn">
+              <button><i></i></button>
+            </div>
+            <div class="message">
+              <input type="text" class="msg" name="massage-area" />
+            </div>
+            <div class="send-btn"><button></button></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container__right">
-    <header class="head__right">
-      <div class="menu-back"><button></button></div>
-      <div class="title">Michael, Amy</div>
-    </header>
-    <div class="con__list-talk">
-    <div class="con__top-talk">
-      <div class="con__clock-icon"></div>
-      <div class="talk__top-ttl">TODAY AT 10:45AM</div>
-    </div>
-        <article class="list__item-l">
-          <div class="list__icon"><img src="./img/icon2.png" alt="icon"></div>
-          <div class="list__talk">
-            <div class="list__talk-cont">Hi Andrea! How are you?</div>
-            <p class="time-l">5 minutes ago</p>
-          </div>
-        </article>
-        <article class="list__item-r">
-          <div class="list__icon"><img src="./img/micon.png" alt="icon"></div>
-          <div class="list__talk">
-            <div class="list__talk-cont">Doing good, how do you feel about grabbing a coffee sometime?</div>
-            <p class="time-r">5 minutes ago</p>
-          </div>
-        </article>
-        <article class="list__item-l">
-          <div class="list__icon"><img src="./img/icon3.png" alt="icon"></div>
-          <div class="list__inf-none">
-            <div class="list__inf-load"></div>
-          </div>
-        </article>
-    </div>
-    <footer>
-      <div class="msg__con">
-      <div class="camera-icon"><button></button></div>
-      <div class="message"><input type="text" rows="20" class="msg"></input></div>
-      <div class="send"><button class="btn-send"></button></div>
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-</body>
+  </body>
 </html>

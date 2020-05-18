@@ -7,18 +7,18 @@ body {
   height: 100%;
   min-height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Karla', sans-serif;
   color: #fff;
   background: linear-gradient(#7571ea, #ed8cb9);
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 div {
   margin: 0;
   padding: 0;
-  border: none;
+  border: 0;
   outline: 0;
 }
 
@@ -38,6 +38,16 @@ li {
   list-style: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 img {
   width: 60px;
   height: 60px;
@@ -47,10 +57,10 @@ img {
 
 #sidebar {
   position: relative;
-  width: 75px;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 75px;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   border-right: 1px solid rgba(255, 255, 255, 0.7);
 }
@@ -177,10 +187,12 @@ img {
 /* ---------- container ---------- */
 
 #container {
+  position: relative;
+  top: 0;
+  left: 0;
   width: calc(100% - 75px);
   height: 100%;
   display: flex;
-  position: relative;
 }
 
 #container__left {
@@ -206,6 +218,9 @@ img {
 
 #container__left-head,
 #container__right-head {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 90%;
   height: 50px;
   padding: 0 5%;
@@ -228,13 +243,14 @@ img {
 }
 
 .title {
+  position: relative;
   width: 100%;
+  height: auto;
   font-size: 18px;
   text-align: center;
   line-height: 50px;
   margin: 0;
   padding: 0;
-  position: relative;
 }
 
 .inner_nav {
@@ -245,12 +261,11 @@ img {
 
 .container__left-bg {
   position: absolute;
-  width: 100%;
-  height: calc(100% - 30%);
   top: 30%;
   bottom: 0;
+  width: 100%;
+  height: calc(100% - 30%);
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1;
 }
 
 .container__settings {
@@ -267,19 +282,19 @@ img {
 
 .container__settings-profile {
   position: relative;
-  width: 100%;
-  height: 60%;
-  min-height: 400px;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 60%;
+  min-height: 380px;
 }
 
 .container__settings-profile-photo {
   position: relative;
-  width: 100%;
-  height: 110px;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 110px;
   display: flex;
   align-items: center;
 }
@@ -317,8 +332,8 @@ img {
   left: 0;
   width: 80%;
   height: calc(100% - 150px);
-  min-height: 248px;
-  padding: 20px 10%;
+  min-height: 210px;
+  padding: 30px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,13 +341,14 @@ img {
 
 .container__settings-profile-information p {
   color: #ad807d;
+  margin: 0;
 }
 
 .information-name,
 .information-email,
 .information-password {
   height: 20%;
-  min-height: 80px;
+  min-height: 70px;
   width: 100%;
 }
 
@@ -372,8 +388,6 @@ input.setting[type='password'] {
   height: 20%;
   min-height: 50px;
   width: 100%;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -422,6 +436,7 @@ input.setting[type='password'] {
 }
 
 /* ---------- container-right ---------- */
+
 .back-btn {
   display: none;
 }
@@ -523,12 +538,12 @@ input.setting[type='password'] {
 }
 
 .item_talk {
-  background-color: #fff;
+  height: auto;
   max-height: 600px;
   min-width: 180px;
   max-width: 550px;
   padding: 25px;
-  display: inline-block;
+  background-color: #fff;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   justify-content: flex-end;
@@ -554,7 +569,6 @@ p.item_talk-time-right {
 
 .item_talk-none {
   padding: 25px;
-  display: inline-block;
 }
 
 /* ----- Loading Animation ----- */
@@ -576,11 +590,11 @@ p.item_talk-time-right {
   content: '';
   position: absolute;
   top: 0;
+  left: 0;
   height: 6px;
   width: 6px;
   border-radius: 100%;
   color: #fff;
-  display: inline-block;
 }
 
 .item_talk-none-load::before {
@@ -625,9 +639,9 @@ p.item_talk-time-right {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .wrapper-foot {
@@ -687,35 +701,38 @@ p.item_talk-time-right {
 
 .camera-btn button i {
   position: absolute;
-  width: 12px;
-  height: 3px;
   top: 0;
   left: 10px;
+  width: 12px;
+  height: 3px;
   color: #fff;
   border: none;
   background-color: currentColor;
 }
 
 .message {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: calc(100% - 95px);
   height: 100%;
   line-height: 60px;
   margin: 0 50px;
   border: none;
-  position: absolute;
-  display: inline-block;
 }
 
 input.msg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   vertical-align: middle;
   color: #fff;
   font-size: 16px;
-  background-color: transparent;
   border: none;
-  position: absolute;
   outline: none;
+  background-color: transparent;
 }
 
 .send-btn {
@@ -763,17 +780,9 @@ input.msg {
   border-bottom: 12.5px solid transparent;
   border-left: 10px solid #412b38;
   border-right: none;
-  padding: 0;
-  margin: 0;
 }
 
 @media screen and (max-width: 1023px) {
-  #container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
   #container__left {
     width: 100%;
     height: 100%;
@@ -854,7 +863,7 @@ input.msg {
     padding: 0;
     margin: 0;
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: #fff;
     display: block;
     cursor: pointer;
