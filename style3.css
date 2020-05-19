@@ -818,11 +818,11 @@ input.msg {
 
 @media screen and (max-width: 1023px) {
   #container__left {
+    position: relative;
     width: 100%;
     height: 100%;
     max-width: 1023px;
     overflow: hidden;
-    position: relative;
     border: none;
   }
 
@@ -843,11 +843,11 @@ input.msg {
   }
 
   #container__left {
+    position: relative;
     width: 100%;
     height: 100%;
     max-width: 1023px;
     overflow: hidden;
-    position: relative;
     border: none;
   }
 
