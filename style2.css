@@ -6,12 +6,12 @@ html {
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Karla', sans-serif;
   color: #fff;
   background: linear-gradient(15deg, #e1bdc8, #3ca5bc, #197bbf);
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 div {
@@ -250,10 +250,6 @@ img {
   display: none;
 }
 
-.setting-btn button {
-  display: none;
-}
-
 .title {
   position: relative;
   width: 100%;
@@ -411,19 +407,19 @@ img {
 }
 
 .alert {
+  position: absolute;
+  left: -10px;
+  top: -10px;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background-color: #4a64ff;
-  color: #fff;
-  left: -10px;
-  top: -10px;
-  position: absolute;
   border: none;
+  color: #fff;
+  background-color: #4a64ff;
   font-size: 14px;
+  font-weight: 900;
   text-align: center;
   line-height: 30px;
-  font-weight: 900;
 }
 
 .list_item_information {
@@ -770,9 +766,14 @@ input.msg {
   color: #fff;
   font-size: 16px;
   border: solid 1px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) inset;
   border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0);
   outline: none;
-  background-color: rgba(255, 255, 255, 0.1);
+}
+
+input.msg:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .send-btn {

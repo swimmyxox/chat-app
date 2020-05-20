@@ -26,13 +26,13 @@
   <body>
     <!-- side bar start-->
     <div id="sidebar">
-      <div class="sidebar__btn-profile">
+      <div class="sidebar_btnProfile">
         <button name="profile" onclick="location.href='profile.html'"></button>
       </div>
-      <div class="sidebar__btn-talk">
-        <button name="talk-list" onclick="location.href='talk.html'"></button>
+      <div class="sidebar_btnChatList">
+        <button name="chatList" onclick="location.href='talk.html'"></button>
       </div>
-      <div class="sidebar__btn-setting">
+      <div class="sidebar_btnSetting">
         <button name="setting" onclick="location.href='setting.html'">
           <i></i>
         </button>
@@ -41,214 +41,214 @@
     <!-- container start -->
     <div id="container">
       <!-- container-left start -->
-      <div id="container__left">
+      <div id="container_left">
         <!-- container-left head area start -->
-        <header id="container__left-head">
-          <div class="menu-btn">
+        <header id="container_left_head">
+          <div class="btnMenu">
             <label id="nav_open" for="nav_checkbox"><span></span></label>
             <input type="checkbox" id="nav_checkbox" />
-            <nav class="inner_nav">
-              <header class="inner_nav-head">
-                <div class="inner_nav-close-btn">
+            <nav class="innerNav">
+              <header class="innerNav_head">
+                <div class="innerNav_head_btnClose">
                   <label id="nav_close" for="nav_checkbox"><span></span></label>
                 </div>
-                <div class="inner_nav-setting-btn">
+                <div class="innerNav_head_btnSetting">
                   <button onclick="location.href='setting.html'">
                     <i></i>
                   </button>
                 </div>
               </header>
-              <ul>
+              <ul class="innerNav_menu">
                 <li><a href="talk.html">Home</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="compose.html">Compose</a></li>
               </ul>
-              <div class="inner_nav-foot">
-                <div class="inner_nav-logout-btn">
+              <div class="innerNav_foot">
+                <div class="innerNav_foot_btnLogout">
                   <button>
                     <h1>Logout</h1>
                     <p>ANDREA JAMESON</p>
                   </button>
                 </div>
-                <div class="inner_nav-icon">
-                  <img src="./img/sicon.png" alt="icon" />
+                <div class="innerNav_foot_avatar">
+                  <img src="./img/sicon.png" alt="avatar" />
                 </div>
               </div>
             </nav>
           </div>
           <div class="title">Hi, Andrea!</div>
-          <div class="setting-btn">
+          <div class="btnSetting">
             <button onclick="location.href='setting.html'"><i></i></button>
           </div>
         </header>
-        <!-- container-left talk-list area start -->
-        <div class="container__left-bg"></div>
-        <div class="container__talk-list">
-          <div class="container__talk_title">
-            <div class="triangle"><span></span></div>
+        <!-- container-left chatList area start -->
+        <div class="backgroundShadow"></div>
+        <div class="chatList">
+          <div class="chatList_title">
+            <div class="chatList_title_icon"><span></span></div>
             <p>RECENT CHATS</p>
           </div>
-          <div class="compose-talk-btn">
+          <div class="chatList_btnAddchat">
             <button onclick="location.href='compose.html'"></button>
           </div>
-          <div class="container__talk-list_items">
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <div class="alert">3</div>
-                <img src="./img/icon.png" alt="icon" />
+          <div class="chatList_area">
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <div class="notificationBadge">3</div>
+                <img src="./img/icon.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Ana Jacobson</p>
                   <p class="time">5 minutes ago</p>
                 </div>
-                <div class="list_item_information-foot">I am on my way</div>
+                <div class="chatList_item_content_foot">I am on my way</div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon2.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon2.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Michael Shelton</p>
                   <p class="time">2 days ago</p>
                 </div>
-                <div class="list_item_information-foot">Video Chat</div>
+                <div class="chatList_item_content_foot">Video Chat</div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon3.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon3.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Amy Shaw</p>
                   <p class="time">4 days ago</p>
                 </div>
-                <div class="list_item_information-foot">...</div>
+                <div class="chatList_item_content_foot">...</div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon4.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon4.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Todd Fisher</p>
                   <p class="time">1 month ago</p>
                 </div>
-                <div class="list_item_information-foot">
+                <div class="chatList_item_content_foot">
                   Hi , thank you for attending the conference it was nice seeing
                   you again!
                 </div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon5.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon5.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Lucy de Groot</p>
                   <p class="time">2 months ago</p>
                 </div>
-                <div class="list_item_information-foot">...</div>
+                <div class="chatList_item_content_foot">...</div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Amy Shaw</p>
                   <p class="time">3 months ago</p>
                 </div>
-                <div class="list_item_information-foot">...</div>
+                <div class="chatList_item_content_foot">...</div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon2.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon2.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Michael Shelton</p>
                   <p class="time">3 months ago</p>
                 </div>
-                <div class="list_item_information-foot">Video Chat</div>
+                <div class="chatList_item_content_foot">Video Chat</div>
               </div>
             </div>
-            <div class="talk-list_item">
-              <div class="list_item_icon">
-                <img src="./img/icon3.png" alt="icon" />
+            <div class="chatList_item">
+              <div class="chatList_item_avatar">
+                <img src="./img/icon3.png" alt="avatar" />
               </div>
-              <div class="list_item_information">
-                <div class="list_item_information-head">
+              <div class="chatList_item_content">
+                <div class="chatList_item_content_head">
                   <p class="name">Amy Shaw</p>
                   <p class="time">3 months ago</p>
                 </div>
-                <div class="list_item_information-foot">...</div>
+                <div class="chatList_item_content_foot">...</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- container-right start -->
-      <div id="container__right">
+      <div id="container_right">
         <!-- container-right head area start -->
-        <header id="container__right-head">
-          <div class="back-btn">
+        <header id="container_right_head">
+          <div class="btnBack">
             <button onclick="location.href='talk.html'"></button>
           </div>
           <div class="title">Michael, Amy</div>
         </header>
-        <!-- container-right talk area start -->
-        <div class="container__talk">
-          <div class="container__talk-top">
+        <!-- container-right chat area start -->
+        <div class="chat">
+          <div class="chat_top">
             <div class="clock-icon"></div>
             <div class="date">TODAY AT 10:45AM</div>
           </div>
-          <div class="talk__item-left">
-            <div class="item_icon">
-              <img src="./img/icon2.png" alt="icon" />
+          <div class="chat_item_left">
+            <div class="chat_item_avatar">
+              <img src="./img/icon2.png" alt="avatar" />
             </div>
-            <div class="item_talk">
-              <div class="item_talk-text">Hi Andrea! How are you?</div>
-              <p class="item_talk-time-left">5 minutes ago</p>
+            <div class="chat_item_text">
+              <p class="text">Hi Andrea! How are you?</p>
+              <p class="time_left">5 minutes ago</p>
             </div>
           </div>
-          <div class="talk__item-right">
-            <div class="item_icon">
-              <img src="./img/micon.png" alt="icon" />
+          <div class="chat_item_right">
+            <div class="chat_item_avatar">
+              <img src="./img/micon.png" alt="avatar" />
             </div>
-            <div class="item_talk">
-              <div class="item_talk-text">
+            <div class="chat_item_text">
+              <p class="text">
                 Doing good, how do you feel about grabbing a coffee sometime?
-              </div>
-              <p class="item_talk-time-right">5 minutes ago</p>
+              </p>
+              <p class="time_right">5 minutes ago</p>
             </div>
           </div>
-          <div class="talk__item-left">
-            <div class="item_icon">
-              <img src="./img/icon3.png" alt="icon" />
+          <div class="chat_item_left">
+            <div class="chat_item_avatar">
+              <img src="./img/icon3.png" alt="avatar" />
             </div>
-            <div class="item_talk-none">
-              <div class="item_talk-none-load"></div>
+            <div class="chat_item_text_none">
+              <div class="loading"></div>
             </div>
           </div>
         </div>
         <!-- container-right foot area start -->
-        <div class="container__right-foot">
-          <div class="wrapper-foot">
-            <div class="camera-btn">
+        <div class="container_right_foot">
+          <div class="container_right_foot_wrapper">
+            <div class="btnCamera">
               <button><i></i></button>
             </div>
-            <div class="message">
-              <input type="text" class="msg" name="massage-area" />
+            <div class="chatTextarea">
+              <input type="text" class="chatText" name="chatText" />
             </div>
-            <div class="send-btn"><button></button></div>
+            <div class="btnSubmit"><button></button></div>
           </div>
         </div>
       </div>
