@@ -52,9 +52,9 @@ img {
   height: 60px;
 }
 
-/* ---------- side-menu ---------- */
+/* ---------- sidebar ---------- */
 
-#sidebar {
+.sidebar {
   position: relative;
   top: 0;
   left: 0;
@@ -64,7 +64,9 @@ img {
   border-right: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.sidebar_btnProfile {
+/* ----- profileButton ----- */
+
+.sidebar__Profile {
   position: absolute;
   top: 30px;
   left: 22.5px;
@@ -72,39 +74,42 @@ img {
   height: 30px;
 }
 
-.sidebar_btnProfile button {
-  position: relative;
+.sidebar__btnProfile {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
-  border: none;
-  outline: none;
-  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
-.sidebar_btnProfile button::before {
+.sidebar__btnProfile::before,
+.sidebar__btnProfile::after {
   content: '';
   position: absolute;
+  background-color: #fff;
+}
+
+.sidebar__btnProfile::before {
   top: 0;
   left: 9px;
   width: 12px;
   height: 12px;
   border-radius: 100%;
-  background-color: #fff;
 }
 
-.sidebar_btnProfile button::after {
-  content: '';
-  position: absolute;
+.sidebar__btnProfile::after {
   top: 14px;
   left: 0;
   width: 30px;
   height: 12px;
   border-radius: 30px 30px 0 0;
-  background-color: #fff;
 }
 
-.sidebar_btnChatList {
+/* ----- chalistButton ----- */
+
+.sidebar__ChatList {
   position: absolute;
   top: 90px;
   left: 22.5px;
@@ -112,19 +117,23 @@ img {
   height: 30px;
 }
 
-.sidebar_btnChatList button {
-  position: relative;
+.sidebar__btnChatList {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
-  border: none;
-  outline: none;
-  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
-.sidebar_btnChatList button::before {
+.sidebar__btnChatList::before,
+.sidebar__btnChatList::after {
   content: '';
   position: absolute;
+}
+
+.sidebar__btnChatList::before {
   top: 0;
   left: 0;
   width: 30px;
@@ -132,19 +141,18 @@ img {
   background-color: #fff;
 }
 
-.sidebar_btnChatList button::after {
-  content: '';
-  position: absolute;
-  top: 11px;
+.sidebar__btnChatList::after {
+  top: 20px;
   left: 0;
-  border-left: solid 8px currentColor;
-  border-right: solid 8px transparent;
-  border-top: solid 8px transparent;
+  border-left: solid 8px #fff;
+  border-right: none;
+  border-top: none;
   border-bottom: solid 8px transparent;
-  color: #fff;
 }
 
-.sidebar_btnSetting {
+/* ----- settingButton ----- */
+
+.sidebar__Setting {
   position: absolute;
   bottom: 30px;
   left: 22.5px;
@@ -152,53 +160,62 @@ img {
   width: 30px;
 }
 
-.sidebar_btnSetting button {
-  position: relative;
+.sidebar__btnSetting {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.sidebar__btnSetting::before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 8px;
   width: 14px;
   height: 26px;
-  border: none;
-  outline: none;
   background-color: #fff;
-  cursor: pointer;
+  transform: rotate(-120deg);
 }
 
-.sidebar_btnSetting button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  transform: rotate(120deg);
-}
-
-.sidebar_btnSetting button::after {
+.sidebar__btnSetting::after {
   content: '';
   position: absolute;
   width: 8px;
   height: 8px;
   top: 9px;
-  left: 3px;
+  left: 11px;
   border-radius: 100%;
   background-color: #685d63;
 }
 
-.sidebar_btnSetting i {
+.sidebar__btnSetting i {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 14px;
+  height: 26px;
+  background-color: #fff;
+}
+
+.sidebar__btnSetting i::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 14px;
+  height: 26px;
   background-color: #fff;
-  transform: rotate(-120deg);
+  transform: rotate(120deg);
 }
 
 /* ---------- container ---------- */
 
-#container {
+.container {
   position: relative;
   top: 0;
   left: 0;
@@ -207,29 +224,30 @@ img {
   display: flex;
 }
 
-#container_left {
+.container_left {
   position: relative;
   top: 0;
   left: 0;
   width: 35%;
   min-width: 400px;
-  max-width: 630px;
+  max-width: 530px;
   height: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.7);
   overflow: hidden;
 }
 
-#container_right {
+.container_right {
   position: relative;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 65%;
+  min-width: calc(100% - 530px);
   height: 100%;
   overflow: hidden;
 }
 
-#container_left_head,
-#container_right_head {
+.container_left__header,
+.container_right__header {
   position: relative;
   top: 0;
   left: 0;
@@ -240,17 +258,17 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* ---------- container-left head ---------- */
+/* ---------- header ---------- */
 
-.btnMenu {
+.header__btnGnavi {
   display: none;
 }
 
-.btnSetting {
+.header__btnSetting {
   display: none;
 }
 
-.title {
+.header__title {
   position: relative;
   width: 100%;
   height: auto;
@@ -259,22 +277,26 @@ img {
   line-height: 50px;
 }
 
-.innerNav {
+.gnavi {
   visibility: collapse;
 }
 
-/* ---------- container-left ---------- */
+.header__btnBack {
+  display: none;
+}
 
-.backgroundShadow {
-  position: absolute;
-  top: 110px;
-  bottom: 0;
-  width: 100%;
+/* ---------- chatList ---------- */
+
+.chatList {
+  position: relative;
+  top: 60px;
+  left: 0;
   height: calc(100% - 110px);
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.chatList_btnAddchat {
+.chatList__Addchat {
   position: absolute;
   top: -35px;
   right: 5%;
@@ -282,7 +304,8 @@ img {
   height: 70px;
 }
 
-.chatList_btnAddchat button {
+.chatList__btnAddchat {
+  display: inline-block;
   position: relative;
   top: 0;
   right: 0;
@@ -293,12 +316,12 @@ img {
   padding: 0;
   border: none;
   outline: none;
+  cursor: pointer;
   background-color: #fff;
   filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
-  cursor: pointer;
 }
 
-.chatList_btnAddchat button::before {
+.chatList__btnAddchat::before {
   content: '';
   position: absolute;
   top: 33px;
@@ -308,7 +331,7 @@ img {
   background-color: #000;
 }
 
-.chatList_btnAddchat button::after {
+.chatList__btnAddchat::after {
   content: '';
   position: absolute;
   top: 25px;
@@ -318,15 +341,7 @@ img {
   background-color: #000;
 }
 
-.chatList {
-  position: relative;
-  top: 60px;
-  left: 0;
-  height: calc(100% - 110px);
-  width: 100%;
-}
-
-.chatList_title {
+.chatList__title {
   position: relative;
   top: 0;
   left: 0;
@@ -336,7 +351,7 @@ img {
   display: flex;
 }
 
-.chatList_title_icon {
+.chatList__icon {
   position: relative;
   top: 0;
   left: 0;
@@ -344,7 +359,8 @@ img {
   height: 18px;
 }
 
-.chatList_title_icon span {
+.chatList__icon::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -355,13 +371,13 @@ img {
   color: #fff;
 }
 
-.chatList_title p {
+.chatList__title p {
   letter-spacing: 3px;
   margin-left: 1em;
   font-weight: 900;
 }
 
-.chatList_area {
+.chatList__main {
   position: relative;
   top: 0;
   left: 0;
@@ -376,7 +392,7 @@ img {
   -webkit-overflow-scrolling: touch;
 }
 
-.chatList_item {
+.chatList__item {
   position: relative;
   top: 0;
   left: 0;
@@ -392,19 +408,21 @@ img {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.chatList_item:hover {
+.chatList__item:hover {
   background-color: #f2f2f2;
 }
 
-.chatList_item_avatar {
+.chatList__avatar {
   position: relative;
   top: 0;
   left: 0;
   height: 60px;
   width: 60px;
+  background-image: url(./img/icon.png);
+  background-size: cover;
 }
 
-.notificationBadge {
+.chatList__badge {
   position: absolute;
   left: -10px;
   top: -10px;
@@ -420,7 +438,7 @@ img {
   line-height: 30px;
 }
 
-.chatList_item_content {
+.chatList__body {
   position: relative;
   top: 0;
   right: 0;
@@ -430,7 +448,7 @@ img {
   padding-left: 7%;
 }
 
-.chatList_item_content_head {
+.chatList__caption {
   position: relative;
   top: 0;
   left: 0;
@@ -442,21 +460,27 @@ img {
   justify-content: space-between;
 }
 
-.name {
+.chatList__name {
+  display: inline-block;
   font-size: 16px;
   font-weight: 900;
-  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.time {
+.chatList__time {
+  display: inline-block;
   font-size: 14px;
   font-weight: 900;
   color: #ae6f6a;
   text-align: right;
-  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.chatList_item_content_foot {
+.chatList__text {
   position: relative;
   height: 36px;
   width: 100%;
@@ -466,13 +490,9 @@ img {
   white-space: nowrap;
 }
 
-/* ---------- container-right ---------- */
+/* ---------- chatArea ---------- */
 
-.btnBack {
-  display: none;
-}
-
-.chat {
+.chatArea {
   position: relative;
   top: 0;
   left: 0;
@@ -484,7 +504,7 @@ img {
   -webkit-overflow-scrolling: touch;
 }
 
-.chat_top {
+.chatArea__top {
   width: 100%;
   height: 25px;
   margin: 20px auto;
@@ -498,7 +518,7 @@ img {
   justify-content: center;
 }
 
-.clock-icon {
+.chatArea__clockIcon {
   position: relative;
   top: 2px;
   left: 0;
@@ -509,7 +529,7 @@ img {
   color: #fff;
 }
 
-.clock-icon::before {
+.chatArea__clockIcon::before {
   content: '';
   position: absolute;
   top: 8px;
@@ -521,7 +541,7 @@ img {
   border: none;
 }
 
-.clock-icon::after {
+.chatArea__clockIcon::after {
   content: '';
   position: absolute;
   top: 3px;
@@ -533,7 +553,7 @@ img {
   border: none;
 }
 
-.date {
+.chatArea__datetime {
   color: #fff;
   font-size: 16px;
   letter-spacing: 3px;
@@ -541,7 +561,7 @@ img {
   padding: 4.5px 10px;
 }
 
-.chat_item_left {
+.chatArea__item_left {
   width: 100%;
   height: auto;
   margin: 40px 0;
@@ -551,7 +571,7 @@ img {
   display: flex;
 }
 
-.chat_item_right {
+.chatArea__item_right {
   width: 100%;
   height: auto;
   margin: 40px auto;
@@ -563,48 +583,82 @@ img {
   flex-direction: row-reverse;
 }
 
-.chat_item_avatar {
+.chatArea__avatar {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 60px;
   width: 60px;
-  height: auto;
 }
 
-.chat_item_text {
+.chatArea__body {
+  position: relative;
   height: auto;
   max-height: 600px;
-  min-width: 180px;
-  max-width: 550px;
+  min-width: 160px;
+  max-width: 530px;
   padding: 25px;
+  border-radius: 5px;
   background-color: #fff;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
 }
 
-.text {
+.chatArea__body_left {
+  margin-left: 20px;
+}
+
+.chatArea__body_left::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fff;
+  border-left: none;
+}
+
+.chatArea__body_right {
+  margin-right: 20px;
+}
+
+.chatArea__body_right::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: none;
+  border-left: 10px solid #fff;
+}
+
+.chatArea__text {
   font-size: 16px;
   padding-bottom: 10px;
 }
 
-p.time_left {
+.chatArea__time_left {
+  display: block;
   font-size: 14px;
   font-weight: 900;
   color: #ae6f6a;
 }
 
-p.time_right {
+.chatArea__time_right {
+  display: block;
   font-size: 14px;
   font-weight: 900;
   color: #ae6f6a;
   text-align: right;
 }
 
-.chat_item_text_none {
+.chatArea__body_none {
   padding: 25px;
 }
 
-/* ----- Loading Animation ----- */
+/* ----- chatArea__loading Animation ----- */
 
-.loading {
+.chatArea__loading {
   position: relative;
   height: 6px;
   width: 6px;
@@ -616,8 +670,8 @@ p.time_right {
   animation-delay: -0.32s;
 }
 
-.loading::before,
-.loading::after {
+.chatArea__loading::before,
+.chatArea__loading::after {
   content: '';
   position: absolute;
   top: 0;
@@ -628,7 +682,7 @@ p.time_right {
   color: #fff;
 }
 
-.loading::before {
+.chatArea__loading::before {
   left: 12px;
   -webkit-animation: load 1s infinite ease;
   animation: load 1s infinite ease;
@@ -636,7 +690,7 @@ p.time_right {
   animation-delay: -0.16s;
 }
 
-.loading::after {
+.chatArea__loading::after {
   left: 24px;
   -webkit-animation: load 1s infinite ease;
   animation: load 1s infinite ease;
@@ -664,8 +718,10 @@ p.time_right {
   }
 }
 
-.container_right_foot {
-  position: absolute;
+/* ---------- chatForm ---------- */
+
+.chatForm {
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -675,7 +731,7 @@ p.time_right {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.container_right_foot_wrapper {
+.chatForm__wrapper {
   position: relative;
   width: 90%;
   height: 100%;
@@ -687,7 +743,7 @@ p.time_right {
   justify-content: space-between;
 }
 
-.btnCamera {
+.chatForm__camera {
   position: relative;
   top: 17.5px;
   left: 0;
@@ -697,7 +753,8 @@ p.time_right {
   padding: 0;
 }
 
-.btnCamera button {
+.chatForm__btnCamera {
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -709,7 +766,7 @@ p.time_right {
   cursor: pointer;
 }
 
-.btnCamera button::before {
+.chatForm__btnCamera::before {
   content: '';
   position: absolute;
   top: 3px;
@@ -719,7 +776,7 @@ p.time_right {
   background-color: #fff;
 }
 
-.btnCamera button::after {
+.chatForm__btnCamera::after {
   content: '';
   position: absolute;
   top: 9px;
@@ -730,7 +787,7 @@ p.time_right {
   background-color: #5e5c62;
 }
 
-.btnCamera button i {
+.chatForm__btnCamera i {
   position: absolute;
   top: 0;
   left: 10px;
@@ -741,7 +798,7 @@ p.time_right {
   background-color: currentColor;
 }
 
-.chatTextarea {
+.chatForm__field {
   position: absolute;
   top: 0;
   left: 0;
@@ -752,7 +809,7 @@ p.time_right {
   border: none;
 }
 
-input.chatText {
+input.chatForm__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -770,11 +827,11 @@ input.chatText {
   outline: none;
 }
 
-input.chatText:focus {
+input.chatForm__text:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.btnSubmit {
+.chatForm__submit {
   position: relative;
   top: 17.5px;
   right: 0;
@@ -785,7 +842,8 @@ input.chatText:focus {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.btnSubmit button {
+.chatForm__btnSubmit {
+  display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
@@ -799,7 +857,7 @@ input.chatText:focus {
   cursor: pointer;
 }
 
-.btnSubmit button::before {
+.chatForm__btnSubmit::before {
   content: '';
   position: absolute;
   top: 0;
@@ -810,7 +868,7 @@ input.chatText:focus {
   border-right: none;
 }
 
-.btnSubmit button::after {
+.chatForm__btnSubmit::after {
   content: '';
   position: absolute;
   top: 0;
@@ -821,30 +879,40 @@ input.chatText:focus {
   border-right: none;
 }
 
-@media screen and (max-width: 1023px) {
-  #container_left {
-    display: none;
-  }
+/* ---------- tablet(size:1023px~641px) ---------- */
 
-  #container_right {
-    position: relative;
+@media screen and (max-width: 1023px) {
+  .container_right {
     width: 100%;
     height: 100%;
-    max-width: 1023px;
+    max-width: 948px;
     overflow: hidden;
   }
 
-  .btnBack {
+  .container_left {
+    display: none;
+  }
+
+  /* ----- header ----- */
+
+  .container_left__header,
+  .container_right__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__back {
+    display: block;
     position: relative;
     top: 15px;
     left: 0;
     width: 20px;
     height: 20px;
-    display: block;
     z-index: 1;
   }
 
-  .btnBack button {
+  .header__btnBack {
+    display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
@@ -858,7 +926,7 @@ input.chatText:focus {
     cursor: pointer;
   }
 
-  .btnBack ::before {
+  .header__btnBack::before {
     content: '';
     position: absolute;
     top: 0;
@@ -869,91 +937,69 @@ input.chatText:focus {
     border-bottom: solid 10px transparent;
     color: #fff;
   }
-
-  .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    text-align: center;
-    line-height: 50px;
-  }
 }
 
-@media screen and (max-width: 639px) {
-  #sidebar {
+/* ---------- mobile(size:640px~360px) ---------- */
+
+@media screen and (max-width: 640px) {
+  .sidebar {
     display: none;
   }
 
-  #container {
+  .container {
     width: 100%;
-    height: 100%;
-    display: flex;
+    min-width: 360px;
   }
 
-  #container_right {
-    width: 100%;
-    height: 100%;
+  .container_right {
     max-width: 639px;
     min-width: 360px;
-    overflow: hidden;
-    position: relative;
   }
 
-  #container_left_head {
-    display: flex;
-    justify-content: space-between;
-  }
+  /* ----- header ----- */
 
-  .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-width: 320px;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    text-align: center;
-    line-height: 50px;
-  }
-
-  .btnMenu {
+  .header__btnGnavi {
+    display: block;
     position: relative;
     top: 16.5px;
+    left: 0;
     width: 30px;
     height: 17px;
-    display: block;
-    z-index: 1;
+    cursor: pointer;
   }
 
-  .btnSetting {
+  .header__Setting {
     position: relative;
     top: 12px;
     right: 0;
     height: 26px;
     width: 30px;
-    display: block;
-  }
-
-  .btnSetting button {
-    position: absolute;
-    width: 14px;
-    height: 26px;
-    right: 8px;
     padding: 0;
     margin: 0;
     border: none;
-    background-color: #fff;
-    display: inline-block;
-    cursor: pointer;
     outline: none;
   }
 
-  .btnSetting button::before {
+  .header__btnSetting {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 26px;
+    width: 30px;
+  }
+
+  .header__btnSetting::before {
+    content: '';
+    position: absolute;
+    right: 8px;
+    width: 14px;
+    height: 26px;
+    background-color: #fff;
+  }
+
+  .header__btnSetting button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -964,18 +1010,28 @@ input.chatText:focus {
     transform: rotate(120deg);
   }
 
-  .btnSetting button::after {
+  .header__btnSetting::after {
     content: '';
     position: absolute;
     top: 9px;
-    left: 3px;
+    left: 11px;
     width: 8px;
     height: 8px;
     border-radius: 100%;
     background-color: #1d3e5c;
   }
 
-  .btnSetting i {
+  .header__btnSetting i {
+    position: absolute;
+    right: 8px;
+    width: 14px;
+    height: 26px;
+    background-color: #fff;
+    transform: rotate(-120deg);
+  }
+
+  .header__btnSetting i::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -985,7 +1041,9 @@ input.chatText:focus {
     transform: rotate(-120deg);
   }
 
-  .innerNav {
+  /* ----- gnavi ----- */
+
+  .gnavi {
     position: fixed;
     opacity: 0;
     z-index: 40;
@@ -993,54 +1051,23 @@ input.chatText:focus {
     left: 0;
     height: 100%;
     width: 100%;
-    min-width: 320px;
+    min-width: 360px;
     padding: 0;
     margin: 0;
-    background: linear-gradient(#ed8cb9, #7571ea);
+    background: linear-gradient(15deg, #197bbf, #3ca5bc, #e1bdc8);
     transition: all 0.5s ease-in-out;
   }
 
-  #nav_checkbox {
+  #gnavi_checkbox {
     display: none;
   }
 
-  #nav_open {
-    width: 30px;
-    height: 17px;
-    background-color: rgba(0, 0, 0, 0);
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  #nav_open span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 5px;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    border: none;
-    display: block;
-  }
-
-  #nav_open span::before {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 0;
-    width: 30px;
-    height: 5px;
-    background-color: #fff;
-  }
-
-  #nav_checkbox:checked ~ .innerNav {
+  #gnavi_checkbox:checked ~ .gnavi {
     visibility: visible;
     opacity: 1;
   }
 
-  .innerNav_head {
+  .gnavi__header {
     position: relative;
     top: 0;
     left: 0;
@@ -1052,53 +1079,16 @@ input.chatText:focus {
     justify-content: space-between;
   }
 
-  .innerNav_head_btnClose {
+  .header__btnClose {
+    cursor: pointer;
     position: relative;
-    width: 0;
-    height: 0;
-  }
-
-  #nav_close span {
-    position: absolute;
-    top: 12.5px;
+    top: 12px;
     left: 0;
     width: 25px;
     height: 25px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
   }
 
-  #nav_close span::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -2px;
-    width: 28px;
-    height: 4px;
-    color: #fff;
-    background-color: currentColor;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  #nav_close span::after {
-    content: '';
-    position: absolute;
-    color: #fff;
-    top: 10px;
-    left: -2px;
-    width: 28px;
-    height: 4px;
-    background-color: currentColor;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-
-  .innerNav_head_btnSetting {
+  .header__Setting_offset {
     position: relative;
     top: 12px;
     right: 0;
@@ -1106,53 +1096,125 @@ input.chatText:focus {
     width: 30px;
   }
 
-  .innerNav_head_btnSetting button {
-    position: absolute;
-    width: 14px;
-    height: 26px;
-    right: 8px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background-color: #fff;
+  .header__btnSetting_offset {
     display: inline-block;
     cursor: pointer;
-    outline: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 26px;
+    width: 30px;
+    background-color: rgba(0, 0, 0, 0);
   }
 
-  .innerNav_head_btnSetting button::before {
+  .header__btnSetting_offset::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    transform: rotate(120deg);
-  }
-
-  .innerNav_head_btnSetting button::after {
-    content: '';
-    position: absolute;
-    top: 9px;
-    left: 3px;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background-color: #ed8cb9;
-  }
-
-  .innerNav_head_btnSetting i {
-    position: absolute;
-    top: 0;
-    left: 0;
+    right: 8px;
     width: 14px;
     height: 26px;
     background-color: #fff;
     transform: rotate(-120deg);
   }
 
-  .innerNav_menu {
+  .header__btnSetting_offset::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 9px;
+    right: 11px;
+    border-radius: 100%;
+    background-color: #d3bdc7;
+  }
+
+  .header__btnSetting_offset i {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    width: 14px;
+    height: 26px;
+    background-color: #fff;
+  }
+
+  .header__btnSetting_offset i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 26px;
+    background-color: #fff;
+    transform: rotate(120deg);
+  }
+
+  #gnavi_open {
+    width: 30px;
+    height: 17px;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #gnavi_open i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    display: block;
+  }
+
+  #gnavi_open i::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+  }
+
+  #gnavi_close i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  #gnavi_close i::before,
+  #gnavi_close i::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -2px;
+    width: 28px;
+    height: 4px;
+    color: #fff;
+    background-color: currentColor;
+  }
+
+  #gnavi_close i::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #gnavi_close i::after {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  .gnavi__menu {
     height: calc(100% - 150px);
     width: 100%;
     padding: 0;
@@ -1164,7 +1226,7 @@ input.chatText:focus {
     justify-content: center;
   }
 
-  .innerNav_menu li {
+  .menu__item {
     height: 18%;
     min-height: 72px;
     width: 100%;
@@ -1174,17 +1236,17 @@ input.chatText:focus {
     vertical-align: none;
   }
 
-  .innerNav_menu a {
+  .menu__item a {
     color: #fff;
     text-decoration: none;
   }
 
-  .innerNav_menu a:hover {
+  .gnavi__menu a:hover {
     border-bottom: 4px solid #fff;
     padding-bottom: 5px;
   }
 
-  .innerNav_foot {
+  .gnavi__footer {
     position: relative;
     left: 0;
     bottom: 0;
@@ -1199,51 +1261,40 @@ input.chatText:focus {
     justify-content: flex-start;
   }
 
-  .innerNav_foot_btnLogout {
+  .footer__btnLogout {
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
     width: calc(95% - 100px);
     height: 100%;
     margin-left: 5%;
-  }
-
-  .innerNav_foot_btnLogout button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0);
-    text-align: left;
+    padding: 18px 0;
     border: none;
     outline: none;
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
   }
 
-  .innerNav_foot h1 {
+  .gnavi__footer h1 {
     font-size: 2em;
-    margin: 0.2em 0;
+    margin: 0;
     color: #fff;
   }
 
-  .innerNav_foot p {
+  .gnavi__footer p {
     font-size: 16px;
-    color: #ed8cb9;
+    margin: 6px 0;
+    color: #d09ab3;
   }
 
-  .innerNav_foot_avatar {
+  .footer__avater {
     position: absolute;
     top: 0;
     right: 0;
     width: 100px;
     height: 100px;
-  }
-
-  .innerNav_foot_avatar img {
-    width: 100px;
-    height: auto;
+    background-image: url(./img/sicon.png);
+    background-size: cover;
   }
 }
