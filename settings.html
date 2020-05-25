@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="stylesheets/main.css" />
-    <link rel="stylesheet" href="stylesheets/setting.css" />
+    <link rel="stylesheet" href="stylesheets/settings.css" />
 
     <!-- Javascript -->
     <script type="text/javascript" src="javascripts/main.js"></script>
@@ -34,7 +34,7 @@
         <a href="chatlist.html" class="sidebar__btnChatList"></a>
       </div>
       <div class="sidebar__Setting">
-        <a href="setting.html" class="sidebar__btnSetting"><i></i></a>
+        <a href="settings.html" class="sidebar__btnSetting"><i></i></a>
       </div>
     </div>
     <!-- container -->
@@ -54,7 +54,7 @@
                   <label id="gnavi_close" for="gnavi_checkbox"><i></i></label>
                 </div>
                 <div class="header__Setting_offset">
-                  <a href="setting.html" class="header__btnSetting_offset">
+                  <a href="settings.html" class="header__btnSetting_offset">
                     <i></i>
                   </a>
                 </div>
@@ -65,10 +65,7 @@
                 <li class="menu__item"><a href="compose.html">Compose</a></li>
               </ul>
               <div class="footer gnavi__footer">
-                <button
-                  class="footer__btnLogout"
-                  onclick="location.href='javascript:void(0)'"
-                >
+                <button class="footer__btnLogout" onclick="location.href=''">
                   <h1>Logout</h1>
                   <p>ANDREA JAMESON</p>
                 </button>
@@ -76,22 +73,22 @@
               </div>
             </nav>
           </div>
-          <div class="header__title">Hi, Andrea!</div>
+          <div class="header__title">Settings</div>
           <div class="header__Setting">
-            <a href="setting.html" class="header__btnSetting"><i></i></a>
+            <a href="settings.html" class="header__btnSetting"><i></i></a>
           </div>
         </header>
-        <!-- setting -->
+        <!-- settings -->
         <div class="backgroundShadow"></div>
-        <div class="setting">
-          <div class="profile setting__profile">
-            <div class="profile__avatar">
-              <div class="photo"></div>
-              <div class="update">
-                <a class="update-btn" href="">UPDATE PHOTO</a>
+        <div class="settings">
+          <div class="profile settings__profile">
+            <div class="profile__topArea">
+              <div class="profile__photo"></div>
+              <div class="profile__updatePhoto">
+                <a href="" class="profile__btnUpdatePhoto">UPDATE PHOTO</a>
               </div>
             </div>
-            <div class="information setting__information">
+            <div class="information profile__information">
               <div class="information__item">
                 <p>NAME</p>
                 <input
@@ -118,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div class="notifications setting__notifications">
+          <div class="notifications settings__notifications">
             <div class="notifications__item">
               <p>Push notifications</p>
               <input type="checkbox" class="notifications__checkbox" />

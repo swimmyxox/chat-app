@@ -419,7 +419,7 @@ img {
   left: 0;
   height: 60px;
   width: 60px;
-  background-image: url(./img/icon.png);
+  background-image: url(../img/icon.png);
   background-size: cover;
 }
 
@@ -1289,7 +1289,7 @@ input.chatForm__text:focus {
     right: 0;
     width: 100px;
     height: 100px;
-    background-image: url(./img/sicon.png);
+    background-image: url(../img/sicon.png);
     background-size: cover;
   }
 }

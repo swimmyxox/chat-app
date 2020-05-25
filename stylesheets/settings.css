@@ -11,7 +11,7 @@
 
 /* ---------- setting ---------- */
 
-.setting {
+.settings {
   position: relative;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@
 
 /* ----- profile ----- */
 
-.setting__profile {
+.settings__profile {
   position: relative;
   top: 0;
   left: 0;
@@ -34,7 +34,7 @@
   min-height: 380px;
 }
 
-.profile__avatar {
+.profile__topArea {
   position: relative;
   top: 0;
   left: 0;
@@ -44,7 +44,7 @@
   align-items: center;
 }
 
-.photo {
+.profile__photo {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,28 +52,33 @@
   width: 110px;
   background-image: url(../img/sicon.png);
   background-size: cover;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.update {
+.profile__updatePhoto {
   position: absolute;
   right: 10%;
   height: 32px;
   width: 132px;
 }
 
-.update-btn {
+.profile__btnUpdatePhoto {
+  cursor: pointer;
   color: #197bbf;
   text-decoration: none;
   letter-spacing: 2px;
   padding-bottom: 10px;
   border: none;
-  border-bottom: solid 2px #197bbf;
   outline: none;
-  cursor: pointer;
+  border-bottom: solid 2px #197bbf;
+  transition: 0.3s;
 }
 
-.setting__information {
+.profile__btnUpdatePhoto:hover {
+  color: #e1bdc8;
+  border-color: #e1bdc8;
+}
+
+.profile__information {
   position: relative;
   top: 0;
   left: 0;
@@ -86,7 +91,7 @@
   justify-content: center;
 }
 
-.setting__information p {
+.profile__information p {
   font-size: 0.9375em;
   letter-spacing: 1px;
   color: #ae6f6a;
@@ -118,7 +123,7 @@ input.information__textarea[type='password'] {
 
 /* ----- notification ----- */
 
-.setting__notifications {
+.settings__notifications {
   position: relative;
   bottom: 0;
   left: 0;
@@ -141,7 +146,7 @@ input.information__textarea[type='password'] {
   justify-content: space-between;
 }
 
-.setting__notifications p {
+.settings__notifications p {
   font-size: 1.125em;
   letter-spacing: 0.5px;
   color: #fff;
