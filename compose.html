@@ -17,209 +17,212 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style3.css" />
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/compose.css" />
 
     <!-- Javascript -->
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
   </head>
 
   <body>
-    <!-- side bar start-->
-    <div id="sidebar">
-      <div class="sidebar__btn-profile">
-        <button name="profile" onclick="location.href='profile.html'"></button>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="sidebar__Profile">
+        <a href="profile.html" class="sidebar__btnProfile"></a>
       </div>
-      <div class="sidebar__btn-talk">
-        <button name="talk-list" onclick="location.href='talk.html'"></button>
+      <div class="sidebar__ChatList">
+        <a href="chatlist.html" class="sidebar__btnChatList"></a>
       </div>
-      <div class="sidebar__btn-setting">
-        <button name="setting" onclick="location.href='setting.html'">
-          <i></i>
-        </button>
+      <div class="sidebar__Setting">
+        <a href="setting.html" class="sidebar__btnSetting"><i></i></a>
       </div>
     </div>
-    <!-- container start -->
-    <div id="container">
-      <!-- container-left start -->
-      <div id="container__left">
-        <!-- container-left head area start -->
-        <header id="container__left-head">
-          <div class="cancel-btn">
-            <button onclick="javascript:history.back()"></button>
+    <!-- container -->
+    <div class="container">
+      <!-- container_left -->
+      <div class="container_left">
+        <!-- container_left header -->
+        <header class="header container_left__header">
+          <div class="header__cancel">
+            <a href="javascript:history.back()" class="header__btnCancel"></a>
           </div>
-          <div class="title">Compose</div>
+          <div class="header__title">Compose</div>
         </header>
-        <!-- container-left compose area start -->
-        <div class="compose_list">
-          <div class="compose_list-icon">
-            <ul>
-              <li><img src="./img/icon2.png" alt="icon" /></li>
-              <li><img src="./img/icon3.png" alt="icon" /></li>
-            </ul>
-          </div>
+        <!-- compose -->
+        <div class="composeArea">
+          <ul class="composeArea__items">
+            <li><img src="./img/icon2.png" alt="avatar" /></li>
+            <li><img src="./img/icon3.png" alt="avatar" /></li>
+          </ul>
           <p>Search people...</p>
         </div>
-        <div class="container__left-bg"></div>
-        <div class="container__compose">
-          <label for="check_label">
-            <div class="compose-list_item">
-              <input type="checkbox" id="check_label" />
-              <div class="checked_label"></div>
-              <div class="compose-list_item_icon">
-                <img src="./img/icon.png" alt="icon" />
+        <div class="backgroundShadow"></div>
+        <div class="composeList">
+          <label for="label_check">
+            <div class="composeList__item">
+              <input type="checkbox" id="label_check" />
+              <div class="label_checked"></div>
+              <div class="composeList__avatar">
+                <img src="./img/icon.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Ana Jacobson</p>
-                <p class="time">5 minutes ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Ana Jacobson</p>
+                <time class="composeList__time">5 minutes ago</time>
               </div>
             </div>
           </label>
-          <label for="check_label2">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon2.png" alt="icon" />
+          <label for="label_check2">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon2.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Michael Shelton</p>
-                <p class="time">2 days ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Michael Shelton</p>
+                <time class="composeList__time">2 days ago</time>
               </div>
-              <input type="checkbox" id="check_label2" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check2" />
+              <div class="label_checked"></div>
             </div>
           </label>
-          <label for="check_label3">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon3.png" alt="icon" />
+          <label for="label_check3">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon3.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Amy Shaw</p>
-                <p class="time">4 days ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Amy Shaw</p>
+                <time class="composeList__time">4 days ago</time>
               </div>
-              <input type="checkbox" id="check_label3" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check3" />
+              <div class="label_checked"></div>
             </div>
           </label>
-          <label for="check_label4">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon4.png" alt="icon" />
+          <label for="label_check4">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon4.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Todd Fisher</p>
-                <p class="time">1 month ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Todd Fisher</p>
+                <time class="composeList__time">1 month ago</time>
               </div>
-              <input type="checkbox" id="check_label4" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check4" />
+              <div class="label_checked"></div>
             </div>
           </label>
-          <label for="check_label5">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon5.png" alt="icon" />
+          <label for="label_check5">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon5.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Lucy de Groot</p>
-                <p class="time">2 months ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Lucy de Groot</p>
+                <time class="composeList__time">2 months ago</time>
               </div>
-              <input type="checkbox" id="check_label5" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check5" />
+              <div class="label_checked"></div>
             </div>
           </label>
-          <label for="check_label6">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon.png" alt="icon" />
+          <label for="label_check6">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Amy Shaw</p>
-                <p class="time">3 months ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Amy Shaw</p>
+                <time class="composeList__time">3 months ago</time>
               </div>
-              <input type="checkbox" id="check_label6" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check6" />
+              <div class="label_checked"></div>
             </div>
           </label>
-          <label for="check_label7">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon2.png" alt="icon" />
+          <label for="label_check7">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon2.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Michael Shelton</p>
-                <p class="time">3 months ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Michael Shelton</p>
+                <time class="composeList__time">3 months ago</time>
               </div>
-              <input type="checkbox" id="check_label7" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check7" />
+              <div class="label_checked"></div>
             </div>
           </label>
-          <label for="check_label8">
-            <div class="compose-list_item">
-              <div class="compose-list_item_icon">
-                <img src="./img/icon3.png" alt="icon" />
+          <label for="label_check8">
+            <div class="composeList__item">
+              <div class="composeList__avatar">
+                <img src="./img/icon3.png" alt="avatar" />
               </div>
-              <div class="compose-list_item_information">
-                <p class="name">Amy Shaw</p>
-                <p class="time">3 months ago</p>
+              <div class="composeList__caption">
+                <p class="composeList__name">Amy Shaw</p>
+                <time class="composeList__time">3 months ago</time>
               </div>
-              <input type="checkbox" id="check_label8" />
-              <div class="checked_label"></div>
+              <input type="checkbox" id="label_check8" />
+              <div class="label_checked"></div>
             </div>
           </label>
         </div>
-        <div class="submit"><button></button></div>
+        <div class="composeList__submit">
+          <a href="javascript:void(0)" class="composeList__btnSubmit"></a>
+        </div>
       </div>
-      <!-- container-right start -->
-      <div id="container__right">
-        <!-- container-right head area start -->
-        <header id="container__right-head">
-          <div class="back-btn"><button></button></div>
-          <div class="title">Michael, Amy</div>
+      <!-- container_right -->
+      <div class="container_right">
+        <!-- container_right header -->
+        <header class="header container_right__header">
+          <div class="header__back">
+            <a href="chatlist.html" class="header__btnBack"></a>
+          </div>
+          <div class="header__title">Michael, Amy</div>
         </header>
-        <!-- container-right talk area start -->
-        <div class="container__talk">
-          <div class="container__talk-top">
-            <div class="clock-icon"></div>
-            <div class="date">TODAY AT 10:45AM</div>
+        <!-- chatArea -->
+        <div class="chatArea">
+          <div class="chatArea__top">
+            <div class="chatArea__clockIcon"></div>
+            <time class="chatArea__datetime">TODAY AT 10:45AM</time>
           </div>
-          <div class="talk__item-left">
-            <div class="item_icon">
-              <img src="./img/icon2.png" alt="icon" />
+          <div class="chatArea__item_left">
+            <div class="chatArea__avatar">
+              <img src="./img/icon2.png" alt="avatar" />
             </div>
-            <div class="item_talk">
-              <div class="item_talk-text">Hi Andrea! How are you?</div>
-              <p class="item_talk-time-left">5 minutes ago</p>
+            <div class="chatArea__body chatArea__body_left">
+              <p class="chatArea__text">Hi Andrea! How are you?</p>
+              <time class="chatArea__time_left">5 minutes ago</time>
             </div>
           </div>
-          <div class="talk__item-right">
-            <div class="item_icon">
-              <img src="./img/micon.png" alt="icon" />
+          <div class="chatArea__item_right">
+            <div class="chatArea__avatar">
+              <img src="./img/micon.png" alt="avatar" />
             </div>
-            <div class="item_talk">
-              <div class="item_talk-text">
+            <div class="chatArea__body chatArea__body_right">
+              <p class="chatArea__text">
                 Doing good, how do you feel about grabbing a coffee sometime?
-              </div>
-              <p class="item_talk-time-right">5 minutes ago</p>
+              </p>
+              <time class="chatArea__time_right">5 minutes ago</time>
             </div>
           </div>
-          <div class="talk__item-left">
-            <div class="item_icon">
-              <img src="./img/icon3.png" alt="icon" />
+          <div class="chatArea__item_left">
+            <div class="chatArea__avatar">
+              <img src="./img/icon3.png" alt="avatar" />
             </div>
-            <div class="item_talk-none">
-              <div class="item_talk-none-load"></div>
+            <div class="chatArea__body_none">
+              <div class="chatArea__loading"></div>
             </div>
           </div>
         </div>
-        <!-- container-right foot area start -->
-        <div class="container__right-foot">
-          <div class="wrapper-foot">
-            <div class="camera-btn">
-              <button><i></i></button>
+        <!-- chatForm -->
+        <div class="chatForm">
+          <div class="chatForm__wrapper">
+            <div class="chatForm__camera">
+              <a href="" class="chatForm__btnCamera"><i></i></a>
             </div>
-            <div class="message">
-              <input type="text" class="msg" name="massage-area" />
+            <div class="chatForm__field">
+              <input type="text" class="chatForm__text" name="chatText" />
             </div>
-            <div class="send-btn"><button></button></div>
+            <div class="chatForm__submit">
+              <a href="javascript:void(0)" class="chatForm__btnSubmit"></a>
+            </div>
           </div>
         </div>
       </div>

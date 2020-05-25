@@ -1,0 +1,208 @@
+/* ---------- backgroundShadow ---------- */
+
+.backgroundShadow {
+  position: absolute;
+  top: 35%;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 35%);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- setting ---------- */
+
+.setting {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: calc(90% - 50px);
+  margin: 5%;
+  background-color: #fff;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ----- profile ----- */
+
+.setting__profile {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  min-height: 380px;
+}
+
+.profile__avatar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110px;
+  width: 110px;
+  background-image: url(../img/sicon.png);
+  background-size: cover;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.update {
+  position: absolute;
+  right: 10%;
+  height: 32px;
+  width: 132px;
+}
+
+.update-btn {
+  color: #197bbf;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: solid 2px #197bbf;
+  outline: none;
+  cursor: pointer;
+}
+
+.setting__information {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: calc(100% - 170px);
+  min-height: 210px;
+  padding: 30px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.setting__information p {
+  font-size: 0.9375em;
+  letter-spacing: 1px;
+  color: #ae6f6a;
+}
+
+.information__item {
+  height: 26%;
+  min-height: 70px;
+  width: 100%;
+}
+
+input.information__textarea[type='text'],
+input.information__textarea[type='password'] {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #e5e5e5;
+  appearance: none; /* ブラウザ互換 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input.information__textarea[type='password'] {
+  font-size: 1.375em;
+}
+
+/* ----- notification ----- */
+
+.setting__notifications {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+  min-height: 150px;
+  width: 80%;
+  padding: 0 10%;
+  background: linear-gradient(15deg, #e1bdc8, #3ca5bc, #197bbf);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notifications__item {
+  height: 23%;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting__notifications p {
+  font-size: 1.125em;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.notifications__checkbox {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  width: 56px;
+  height: 30px;
+  border-radius: 20px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #5c5c5c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.notifications__checkbox:checked {
+  background-color: #000;
+}
+
+.notifications__checkbox::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 16px;
+  height: 16px;
+  background-color: #e1bdc8;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.notifications__checkbox:checked::before {
+  background-color: #197bbf;
+  left: 33px;
+}
+
+/* ---------- tablet(size:1023px~641px) ---------- */
+
+@media screen and (max-width: 1024px) {
+  .container_left {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 948px;
+    overflow: hidden;
+  }
+
+  .container_right {
+    display: none;
+  }
+}
+
+/* ---------- mobile(size:640px~360px) ---------- */
+
+@media screen and (max-width: 639px) {
+  .container_left {
+    max-width: 639px;
+    min-width: 360px;
+  }
+}

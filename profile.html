@@ -17,168 +17,172 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style4.css" />
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/profile.css" />
 
     <!-- Javascript -->
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
   </head>
 
   <body>
-    <!-- side bar start-->
-    <div id="sidebar">
-      <div class="sidebar__btn-profile">
-        <button name="profile" onclick="location.href='profile.html'"></button>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="sidebar__Profile">
+        <a href="profile.html" class="sidebar__btnProfile"></a>
       </div>
-      <div class="sidebar__btn-talk">
-        <button name="talk-list" onclick="location.href='talk.html'"></button>
+      <div class="sidebar__ChatList">
+        <a href="chatlist.html" class="sidebar__btnChatList"></a>
       </div>
-      <div class="sidebar__btn-setting">
-        <button name="setting" onclick="location.href='setting.html'">
-          <i></i>
-        </button>
+      <div class="sidebar__Setting">
+        <a href="setting.html" class="sidebar__btnSetting"><i></i></a>
       </div>
     </div>
-    <!-- container start -->
-    <div id="container">
-      <!-- container-left start -->
-      <div id="container__left">
-        <!-- container-left head area start -->
-        <header id="container__left-head">
-          <div class="menu-btn">
-            <label id="nav_open" for="nav_checkbox"><span></span></label>
-            <input type="checkbox" id="nav_checkbox" />
-            <nav class="inner_nav">
-              <header class="inner_nav-head">
-                <div class="inner_nav-close-btn">
-                  <label id="nav_close" for="nav_checkbox"><span></span></label>
+    <!-- container -->
+    <div class="container">
+      <!-- container_left -->
+      <div class="container_left">
+        <!-- container_left header -->
+        <header class="header container_left__header">
+          <div class="header__btnGnavi">
+            <label id="gnavi_open" for="gnavi_checkbox"><i></i></label>
+            <input type="checkbox" id="gnavi_checkbox" />
+            <!-- gnavi area -->
+            <nav class="gnavi">
+              <header class="header gnavi__header">
+                <div class="header__btnClose">
+                  <label id="gnavi_close" for="gnavi_checkbox"><i></i></label>
                 </div>
-                <div class="inner_nav-setting-btn">
-                  <button onclick="location.href='setting.html'">
+                <div class="header__Setting_offset">
+                  <a href="setting.html" class="header__btnSetting_offset">
                     <i></i>
-                  </button>
+                  </a>
                 </div>
               </header>
-              <ul>
-                <li><a href="talk.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="compose.html">Compose</a></li>
+              <ul class="menu gnavi__menu">
+                <li class="menu__item"><a href="chatlist.html">Home</a></li>
+                <li class="menu__item"><a href="profile.html">Profile</a></li>
+                <li class="menu__item"><a href="compose.html">Compose</a></li>
               </ul>
-              <div class="inner_nav-foot">
-                <div class="inner_nav-logout-btn">
-                  <button>
-                    <h1>Logout</h1>
-                    <p>ANDREA JAMESON</p>
-                  </button>
-                </div>
-                <div class="inner_nav-icon">
-                  <img src="./img/sicon.png" alt="icon" />
-                </div>
+              <div class="footer gnavi__footer">
+                <button
+                  class="footer__btnLogout"
+                  onclick="location.href='javascript:void(0)'"
+                >
+                  <h1>Logout</h1>
+                  <p>ANDREA JAMESON</p>
+                </button>
+                <div class="footer__avater"></div>
               </div>
             </nav>
           </div>
-          <div class="title">Profile</div>
-          <div class="setting-btn">
-            <button onclick="location.href='setting.html'"><i></i></button>
+          <div class="header__title">Hi, Andrea!</div>
+          <div class="header__Setting">
+            <a href="setting.html" class="header__btnSetting"><i></i></a>
           </div>
         </header>
-        <!-- container-left profile area start -->
-        <div class="container__left-bg"></div>
-        <div class="container__profile">
-          <div class="container__profile_top">
-            <div class="container__profile_top_name">
+        <!-- profile -->
+        <div class="backgroundShadow"></div>
+        <div class="profile">
+          <div class="profile_top">
+            <div class="profile__name">
               <p>Andrea<br />Jameson</p>
             </div>
           </div>
-          <div class="container__profile_bottom">
-            <div class="container__profile_bottom_information">
+          <div class="profile_bottom">
+            <div class="profile__title">
               <p>Event Manager<br />San Francisco</p>
             </div>
-            <div class="container__profile_bottom_states">
-              <div class="states">
+            <div class="profile__addMember">
+              <a href="javascript:void(0)" class="profile__btnAddMember">
+                <i></i>
+              </a>
+            </div>
+            <div class="profile__states">
+              <div class="states__item">
                 <h1>145k</h1>
                 <p>FOLLOWERS</p>
               </div>
-              <div class="states">
+              <div class="states__item">
                 <h1>56k</h1>
                 <p>FOLLOWING</p>
               </div>
-              <div class="states">
+              <div class="states__item">
                 <h1>1,690</h1>
                 <p>LIKES</p>
               </div>
             </div>
-            <div class="container__profile_bottom_toolbar">
-              <div class="toolbar_item">
-                <button
-                  class="talk-btn"
-                  onclick="location.href='talk.html'"
-                ></button>
+            <div class="footerMenu">
+              <div class="footerMenu__item">
+                <a href="chatlist.html" class="footerMenu__btnChat"></a>
               </div>
-              <div class="toolbar_item">
-                <button class="phone-btn"><i></i></button>
+              <div class="footerMenu__item">
+                <a href="javascript:void(0)" class="footerMenu__btnPhone">
+                  <i></i>
+                </a>
               </div>
-              <div class="toolbar_item">
-                <button class="video-btn"></button>
+              <div class="footerMenu__item">
+                <a href="javascript:void(0)" class="footerMenu__btnVideo"></a>
               </div>
-            </div>
-            <div class="add-member-btn">
-              <button><i></i></button>
             </div>
           </div>
         </div>
       </div>
-      <!-- container-right start -->
-      <div id="container__right">
-        <!-- container-right head area start -->
-        <header id="container__right-head">
-          <div class="back-btn"><button></button></div>
-          <div class="title">Michael, Amy</div>
+      <!-- container_right -->
+      <div class="container_right">
+        <!-- container_right header -->
+        <header class="header container_right__header">
+          <div class="header__back">
+            <a href="chatlist.html" class="header__btnBack"></a>
+          </div>
+          <div class="header__title">Michael, Amy</div>
         </header>
-        <!-- container-right talk area start -->
-        <div class="container__talk">
-          <div class="container__talk-top">
-            <div class="clock-icon"></div>
-            <div class="date">TODAY AT 10:45AM</div>
+        <!-- chatArea -->
+        <div class="chatArea">
+          <div class="chatArea__top">
+            <div class="chatArea__clockIcon"></div>
+            <time class="chatArea__datetime">TODAY AT 10:45AM</time>
           </div>
-          <div class="talk__item-left">
-            <div class="item_icon">
-              <img src="./img/icon2.png" alt="icon" />
+          <div class="chatArea__item_left">
+            <div class="chatArea__avatar">
+              <img src="./img/icon2.png" alt="avatar" />
             </div>
-            <div class="item_talk">
-              <div class="item_talk-text">Hi Andrea! How are you?</div>
-              <p class="item_talk-time-left">5 minutes ago</p>
+            <div class="chatArea__body chatArea__body_left">
+              <p class="chatArea__text">Hi Andrea! How are you?</p>
+              <time class="chatArea__time_left">5 minutes ago</time>
             </div>
           </div>
-          <div class="talk__item-right">
-            <div class="item_icon">
-              <img src="./img/micon.png" alt="icon" />
+          <div class="chatArea__item_right">
+            <div class="chatArea__avatar">
+              <img src="./img/micon.png" alt="avatar" />
             </div>
-            <div class="item_talk">
-              <div class="item_talk-text">
+            <div class="chatArea__body chatArea__body_right">
+              <p class="chatArea__text">
                 Doing good, how do you feel about grabbing a coffee sometime?
-              </div>
-              <p class="item_talk-time-right">5 minutes ago</p>
+              </p>
+              <time class="chatArea__time_right">5 minutes ago</time>
             </div>
           </div>
-          <div class="talk__item-left">
-            <div class="item_icon">
-              <img src="./img/icon3.png" alt="icon" />
+          <div class="chatArea__item_left">
+            <div class="chatArea__avatar">
+              <img src="./img/icon3.png" alt="avatar" />
             </div>
-            <div class="item_talk-none">
-              <div class="item_talk-none-load"></div>
+            <div class="chatArea__body_none">
+              <div class="chatArea__loading"></div>
             </div>
           </div>
         </div>
-        <!-- container-right foot area start -->
-        <div class="container__right-foot">
-          <div class="wrapper-foot">
-            <div class="camera-btn">
-              <button><i></i></button>
+        <!-- chatForm -->
+        <div class="chatForm">
+          <div class="chatForm__wrapper">
+            <div class="chatForm__camera">
+              <a href="" class="chatForm__btnCamera"><i></i></a>
             </div>
-            <div class="message">
-              <input type="text" class="msg" name="massage-area" />
+            <div class="chatForm__field">
+              <input type="text" class="chatForm__text" name="chatText" />
             </div>
-            <div class="send-btn"><button></button></div>
+            <div class="chatForm__submit">
+              <a href="javascript:void(0)" class="chatForm__btnSubmit"></a>
+            </div>
           </div>
         </div>
       </div>
