@@ -14,6 +14,16 @@ function handleSubmit() {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
+  // event handlers for chat messaging
   var submitButton = document.querySelector('.chatForm__btnSubmit');
   submitButton.addEventListener('click', handleSubmit);
+
+  // event handlers for chatlist__item
+  Array.from(document.querySelectorAll('.chatList__item')).map((el) =>
+    el.addEventListener('click', redirectToChatPage, true),
+  );
 });
+
+function redirectToChatPage() {
+  location.href = '/chat.html';
+}
